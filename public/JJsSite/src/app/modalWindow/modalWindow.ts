@@ -4,7 +4,8 @@ import { ModalDirective } from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
     selector: 'modal-window',
-    templateUrl: './ModalWindow.html'
+    templateUrl: './ModalWindow.html',
+    styleUrls: ['./ModalWindow.scss']
 })
 export class ModalWindow {
     @ViewChild('childModal') public childModal: ModalDirective;
