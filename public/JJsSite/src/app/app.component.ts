@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef  } from '@angular/core';
+//import { ModalWindow } from './ModalWindow/ModalWindow';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  private viewContainerRef: ViewContainerRef;
   title = 'app works!';
+  public launchModal() {
+    alert("got here");
+    //ModalWindow.call("");
+  }
+  public constructor(viewContainerRef:ViewContainerRef) {
+    // You need this small hack in order to catch application root view container ref
+    this.viewContainerRef = viewContainerRef;
+  }
 }
